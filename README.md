@@ -1,39 +1,47 @@
-# BOM-DOM-API---JS-CheatSheet
-JS CheatSheet for DOM and BOM API
+# JS CheatSheet for DOM and BOM API
 
-Написать в док-те (работает только при загрузке стр-ци)
-```
+**Написать в док-те (работает только при загрузке стр-ци)**
+```js
 document.write("abc"); // (можно поместить в любое место html в теге 'script')
 document.writeln("abc"); // (пишет в линию, корректно работает в теге <pre>)
 ```
 
-// Общ. св-ва
+**Общ. св-ва**
+```js
 document.cookie // св-во позволяет читать и писать куки файлы
 document.lastModified // дата последнего изменения док-та
 document.location // устаревший синоним св-ва url
 document.referrer // адрес док-та содержащего ссылку кот привела на этот документ
 document.title // содержимое html тега <title>
+```
 
+**Коллекции**
+```js
 document.anchors // коллекция якорей док-та
 document.forms // коллекция форм док-та
 document.images // коллекция картинок док-та
 document.links // коллекция ссылок док-та
+```
 
-// Селлекторы
+**Селлекторы**
+```js
 document.getElementById('#id') // получить эл по id
 document.getElementsByTagName('tag') // получить коллекцию эл-тов по тегам
 document.getElementsByName('name') // получить коллекцию эл-тов по атр name
 document.getElementsByClassName('class') // получить коллекцию эл-тов по атр class
 document.querySelectorAll('#id .class tag') // получить коллекцию эл-тов по css селлектору
 document.querySelector('#id .class tag') //  получить первый эл-т по css селлектору
+```
 
-// Навигация по узлам
+**Навигация по узлам**
+```js
 el.childNode // вернет все дочерние ел-ты
 el.parentNode // вернет родительский узел
 el.firstChild // вернет первый дочерний эл-т
 el.lastChild // вернет последний дочерний эл-т
 el.nextSibling // вернет след-щего соседа
 el.previousSibling // вернет пред-щего соседа
+```
 	
 	// Альтернатива для получения только эл-тов:
 	el.children
