@@ -57,13 +57,13 @@ el.closest('#id .class tag'); // возвращает ближайший род�
 
 **Методы для работы с DOM**
 ```js
-var par = document.createElement(type, props, children)
-document.createTextNode(string) // Creates a new text node with the node value of string.
+var el = document.createElement(type, props, children)
+var txt = document.createTextNode(string) // Creates a new text node with the node value of string.
+var elClone = el.cloneNode(true); // Клонировать узел, если true - то доч узлы включаются
 el.appendChild(par) // Добавить дочерний эл-т
 el.insertBefore(newElement, referenceElement) // вставит эл-т newElement перед эл-том referenceElement, кот является childNode of el
 el.removeChild(par) // Удаляет дочерний элемент из DOM. Возвращает удаленный элемент.
 el.replaceChild(newChild, oldChild) // Заменяет дочерний элемент на выбранный. Возвращает замененный элемент.
-var elClone = el.cloneNode(true); // Клонировать узел, если true - то доч узлы включаются
 ```
 
 **Работа с атрибутами**
@@ -119,4 +119,17 @@ onMouseDown, onMouseUp  // Событие onClick, поделенное на д�
 onKeyPress, onKeyUp, onKeyDown // Когда происходит нажатие клавиши на клавиатуре
 onfocus // Когда выбран в фокусе определенный элемент
 onBlur // Когда этот элемент не выбран
+```
+
+**Анимация**
+```js
+// кроссбраузерный способ
+(function() {
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+
+myReq = requestAnimationFrame(callback); // Запустить анимацию
+cancelAnimationFrame(myReq);	// Остановить анимацию
 ```
