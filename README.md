@@ -63,6 +63,7 @@ el.appendChild(par) // Добавить дочерний эл-т
 el.insertBefore(newElement, referenceElement) // вставит эл-т newElement перед эл-том referenceElement, кот является childNode of el
 el.removeChild(par) // Удаляет дочерний элемент из DOM. Возвращает удаленный элемент.
 el.replaceChild(newChild, oldChild) // Заменяет дочерний элемент на выбранный. Возвращает замененный элемент.
+var elClone = el.cloneNode(true); // Клонировать узел, если true - то доч узлы включаются
 ```
 
 **Работа с атрибутами**
