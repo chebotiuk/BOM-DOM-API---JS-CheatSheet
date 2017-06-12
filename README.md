@@ -41,6 +41,7 @@ el.firstChild // вернет первый дочерний эл-т
 el.lastChild // вернет последний дочерний эл-т
 el.nextSibling // вернет след-щего соседа
 el.previousSibling // вернет пред-щего соседа
+el.closest('#id .class tag'); // возвращает ближайший родительский элемент (или сам элемент), который соответствует заданному CSS-селектору или null
 ```
 >Альтернатива для получения только эл-тов:
 ```js
@@ -74,7 +75,8 @@ el.getAttribute(name) // Получить атрибут
 ```js
 el.nodeType // Вернет тип узла, где 1 - Element, 3 - Text, 8 - Comment, 9 - Document
 el.nodeName // Вернет имя эл-та по тегу
-el.nodeValue // Вернет или запишет текстовое значение узла, альтернатива el.innerText или data
+el.textContent // Вернет или запишет текстовое значение узла, альтернатива el.innerText
+el.nodeValue // Вернет или запишет текстовое значение текстового узла, альтернатива el.data
 el.innerHTML // Вернет или запишет html узла
 ```
 
@@ -101,6 +103,9 @@ el.onclick = function() {}; // добавление события через о
 el.addEventListener('click', function() {  
 	// Добавление событий через event listener
 });
+
+// HTML <button class="" onclick='function'>Submit</button> 
+// JSX <button className="" onClick='function'>Submit</button>
 ```
 
 ```js
