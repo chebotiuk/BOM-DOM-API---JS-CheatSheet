@@ -43,13 +43,15 @@ el.nextSibling // вернет след-щего соседа
 el.previousSibling // вернет пред-щего соседа
 ```
 	
-	// Альтернатива для получения только эл-тов:
+>Альтернатива для получения только эл-тов:
+```javascript
 	el.children
 	el.parentElement
 	el.firstElementChild
 	el.lastElementChild
 	el.nextElementSibling
 	el.previousElementSibling
+```
 
 
 // Методы для работы с DOM
