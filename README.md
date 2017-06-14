@@ -68,8 +68,8 @@ el.removeChild(par) // Удаляет дочерний элемент из DOM. 
 el.replaceChild(newChild, oldChild) // Заменяет дочерний элемент на выбранный. Возвращает замененный элемент.
 el.contains(otherNode) // Возвращает true если otherNode является потомком el. В противном случае возвращает false.
 el.insertAdjacentHTML(position, text); // Разбирает text как HTML или XML и вставляет полученные узлы (nodes) в DOM дерево относительно el. Варианты position:
-										// 'beforebegin' - Перед el; 'afterbegin'- Внутри el, перед первым дочерним эл-том.
-										// 'beforeend' - Внутри element, после последнего дочернего эл-та; 'afterend' - После element.
+	// 'beforebegin' - Перед el; 'afterbegin'- Внутри el, перед первым дочерним эл-том.
+	// 'beforeend' - Внутри element, после последнего дочернего эл-та; 'afterend' - После element.
 
 
 ```
